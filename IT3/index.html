@@ -17,40 +17,42 @@
             background-color: #f4f4f4;
         }
         /* Navigation Styling */
-        .nav-container {
+        nav {
             background: #333;
             padding: 1rem 0;
             position: sticky;
-            top: 0;
         }
 
-        .main-nav ul {
+        nav ul {
             list-style: none;
             display: flex;
             justify-content: center;
-            gap: 2rem;
+            gap: 1rem;
         }
 
-        .main-nav a {
+        nav a {
             color: #ffffff;
             text-decoration: none;
             padding: 0.5rem 1rem;
             transition: color 0.3s ease;
         }
 
-        .main-nav a:hover {
+        nav a:hover {
             color: #ffd700;
         }
 
         /*Header Styling*/
-        .header {
-            background: #fff;
-            padding: 3rem 1rem;
-            text-align: center;
-            margin-bottom: 2rem;
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem;
+            width: 100%;
+            position: sticky;
+            top: 0;
         }
 
-        .header h1 {
+        header h1 {
             color: #333;
             margin-bottom: 1rem;
             font-size: 2.5rem;
@@ -62,10 +64,10 @@
         }  
 
         /* Main Content Styling */
-        .main-content {
-            padding: 0 1rem;
-            max-width: 800px;
-            margin: 0 auto;
+        main {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 2rem;
         }
 
         .about-section, .services-section, .contact-section {
@@ -100,38 +102,38 @@
         }
 
         /* Footer Styling */
-        .footer {
+        footer {
             text-align: center;
             padding: 2rem;
             background-color: #333;
             color: white;
             margin-top: 2rem;
+            bottom: auto;
         }
     </style>
 </head>
 <body>
     <header>
-        <nav class="nav-container">
-            <div class="main-nav">
-                <ul>
-                    <li><a href="#about">About Us</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </div>
-        </nav>
         <h1>Welcome to My Website III</h1>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
     </header>
-    <main class="main-content">
+    <main>
         <article>
             <h2>About Us</h2>
             <p>This is a paragraph about Company x</p>
         </article>
-    </main>
+
     <aside>
-        <div>Contact Us</div>
-        <div>Email: contact@companyx.com</div>
+        <h2>Contact Us</h2>
+        <address>Email: contact@companyx.com</address>
     </aside>
+    </main>
 
     <footer class="footer">
         <p>&copy; 2023 Company x. All rights reserved.</p>
