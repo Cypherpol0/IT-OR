@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body class="flex flex-col min-h-screen">
+    <header class="bg-red-900 text-white p-4 flex justify-center items-center flex-col">
+        <h1 class="text-3xl font-bold mb-2">Welcome to Tailwind CSS 2</h1>
+        <nav class="mt-2 w-full flex justify-center">
+            <ul class="flex space-x-4 p-4">
+                <li><a href="#" class="hover:underline bg-red-500 rounded m-2 p-2">Home</a></li>
+                <li><a href="#" class="hover:underline bg-red-500 rounded m-2 p-2">About</a></li>
+                <li><a href="#" class="hover:underline bg-red-500 rounded m-2 p-2">Services</a></li>
+                <li><a href="#" class="hover:underline bg-red-500 rounded m-2 p-2">Contact</a></li>
+            </ul>
+    </header>
+    <main style="background-image: url('Tree.jpg');" class="h-screen bg-cover bg-center flex justify-center items-center pb-96">
+        <div class="text-center w-60 border-2 border-gray-200 p-4 rounded-lg shadow-lg">
+            <h1 class="text-2xl font-bold underline underline-offset-2">Tailwind</h1>
+            <p>Tailwind is an awesome framework for CSS that uses utility classes to make the  
+            process of styling way easier.</p>
+            <p>You can use tailwind yourself just click the link below</p>
+            <a href="https://tailwindcss.com" class="text-green-500 border border-green-200 rounded-lg p-1 m-2 hover:shadow-lg hover:bg-gray-500 hover:scale-150 hover:underline">Tailwind Website</a>
+        </div> 
+    </main>
+
+    <footer class="bg-gray-800 text-white text-center p-4 flex flex-col fixed bottom-0 w-full">
+                <p class="mb-2">&copy; 2024 My Tailwind CSS 2 Website</p>
+                <ul class="flex justify-center space-x-4 mb-2">
+                    <li><a href="#" class="hover:underline">Privacy Policy</a></li>
+                    <li><a href="#" class="hover:underline">Terms of Service</a></li>
+                    <li><a href="#" class="hover:underline">Help</a></li>
+                </ul>
+                <p class="m-2">44 Address Road, <br>
+                    Living Place,<br>
+                    SE4 444.
+                </p>
+                <p>Brought to you by TailwindCSS</p>
+    </footer>
+</body>
+</html>
