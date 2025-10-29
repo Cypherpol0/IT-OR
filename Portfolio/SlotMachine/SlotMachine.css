@@ -1,0 +1,9 @@
+@keyframes spin {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-25%); }
+    100% { transform: translateY(0); }
+}
+
+.spinning {
+    animation: spin 0.5s ease-in-out;
+}

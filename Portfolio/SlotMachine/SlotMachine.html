@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slot Machine</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="SlotMachine.css">
+</head>
+<body>
+    <h1 class="font-serif text-xl w-full text-center">Welcome to the Slot Machine Game</h1>
+    <div id="slot-machine" class="flex flex-row justify-center items-center w-full p-8">
+        <div class="reel flex items-center" id="reel1">
+            <img src="Slot Machine Images/icon_1_3.png" class="w-20 h-16 object-contain border-1" alt="slot machine reel 1"/>
+        </div>
+        <div class="reel flex items-center" id="reel2">
+            <img src="Slot Machine Images/icon_1_3.png" class="w-20 h-16 object-contain border-1" alt="slot machine reel 2"/>
+        </div>
+        <div class="reel flex items-center" id="reel3">
+            <img src="Slot Machine Images/icon_1_3.png" class="w-20 h-16 object-contain border-1" alt="slot machine reel 3"/>
+        </div>
+    </div>
+    <button id="spin-button" class="flex mx-auto text-xl text-white rounded-full bg-red-600 p-4 hover:bg-red-800">SPIN</button>
+    <div id="result"></div>
+    <script src="SlotMachine.js"></script>
+</body>
+</html>
