@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe</title>
+    <link rel="stylesheet" href="TicTacToe.css">    
+</head>
+<body>
+    <h1>Tic Tac Toe</h1>
+    <p id="status" aria-live="polite">Player X's turn</p>
+
+    <!-- board: 3x3 grid of buttons -->
+    <div class="board" role="grid" aria-label="Tic Tac Toe board">
+      <button class="cell" data-index="0" aria-label="Cell 1" role="gridcell"></button>
+      <button class="cell" data-index="1" aria-label="Cell 2" role="gridcell"></button>
+      <button class="cell" data-index="2" aria-label="Cell 3" role="gridcell"></button>
+
+      <button class="cell" data-index="3" aria-label="Cell 4" role="gridcell"></button>
+      <button class="cell" data-index="4" aria-label="Cell 5" role="gridcell"></button>
+      <button class="cell" data-index="5" aria-label="Cell 6" role="gridcell"></button>
+
+      <button class="cell" data-index="6" aria-label="Cell 7" role="gridcell"></button>
+      <button class="cell" data-index="7" aria-label="Cell 8" role="gridcell"></button>
+      <button class="cell" data-index="8" aria-label="Cell 9" role="gridcell"></button>
+    </div>
+
+    <div id="result"> </div>
+
+    <!-- controls -->
+    <div class="controls" style="text-align:center; margin-top:1rem;">
+      <button id="reset">Reset</button>
+    </div>
+    <script src="TicTacToe.js"></script>
+</body>
+</html>

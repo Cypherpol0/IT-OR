@@ -1,0 +1,36 @@
+/* Board container: 3 columns, responsive gap */
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px; /* space between cells */
+    width: min(600px, 90vw); /* responsive max width */
+    margin: 0 auto;
+}
+
+/* Cells: square, centered content, accessible focus style */
+.cell {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    aspect-ratio: 1 / 1; /* keeps square */
+    background: white;
+    border: 1px solid #000;
+    font-size: clamp(1.25rem, 5vw, 2.5rem); /* responsive font */
+    user-select: none;
+}
+
+/* Hover / focus */
+.cell:hover {
+    background-color: #f0f0f0;
+    cursor: pointer;
+}
+.cell:focus {
+    outline: 3px solid #6cb4ff;
+    outline-offset: -3px;
+}
+
+/* Optional: disabled/played state */
+.cell.played {
+    cursor: default;
+    opacity: 0.9;
+}
