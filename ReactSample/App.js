@@ -8,16 +8,29 @@ const App = () => {
     jobTitle: "Web Developer",
     bio: "Passionate developer with a love for React."
   };
-  const secondProfile = {
-    image: "https://via.placeholder.com/150",
-    name: "Jane Doe",
+
+  const userProfile2 = {
+    image: "https://via.placeholder.com/150/FFB6C1/000000?text=Jane",
+    name: "Jane Smith",
     jobTitle: "UI/UX Designer",
-    bio: "Designing intuitive user experiences."
+    bio: "Designer focused on user-centered experiences."
   };
-  const thirdProfile = {
-    image: "https://via.placeholder.com/150",
-    name: "Mike Johnson",
-    jobTitle: "Project Manager",
-    bio: "Ensuring projects are delivered on time."
+
+  const userProfile3 = {
+    image: "https://via.placeholder.com/150/87CEFA/000000?text=Bob",
+    name: "Bob Lee",
+    jobTitle: "Backend Engineer",
+    bio: "Builds scalable APIs and services."
   };
+
+  return (
+    <div className="app">
+      <h1>User Profiles</h1>
+      <ProfileCard {...userProfile} />
+      <ProfileCard {...userProfile2} />
+      <ProfileCard {...userProfile3} />
+    </div>
+  );
 };
+
+export default App;
