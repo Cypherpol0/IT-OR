@@ -1,23 +1,24 @@
-import React from "react"; 
+import React from "react";
 import ProfileCard from "./ProfileCard";
+import EmptyProfPic from "./EmptyProfPic.jpg";
 
 const App = () => {
   const userProfile = {
-    image: "https://via.placeholder.com/150",
+    image: EmptyProfPic,
     name: "John Doe",
     jobTitle: "Web Developer",
     bio: "Passionate developer with a love for React."
   };
 
   const userProfile2 = {
-    image: "https://via.placeholder.com/150/FFB6C1/000000?text=Jane",
+    image: EmptyProfPic,
     name: "Jane Smith",
     jobTitle: "UI/UX Designer",
     bio: "Designer focused on user-centered experiences."
   };
 
   const userProfile3 = {
-    image: "https://via.placeholder.com/150/87CEFA/000000?text=Bob",
+    image: EmptyProfPic,
     name: "Bob Lee",
     jobTitle: "Backend Engineer",
     bio: "Builds scalable APIs and services."
