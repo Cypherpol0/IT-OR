@@ -2,6 +2,7 @@ import React from "react";
 import ProfileCard from "./ProfileCard";
 import EmptyProfPic from "./EmptyProfPic.jpg";
 import VarDisplay from "./VarDisplay";
+import JobBoard from "./JobBoard";
 
 const App = () => {
   const userProfile = {
@@ -32,6 +33,7 @@ const App = () => {
       <ProfileCard {...userProfile2} />
       <ProfileCard {...userProfile3} />
        <VarDisplay />
+       <JobBoard />
     </div>
   );
 };
