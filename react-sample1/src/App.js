@@ -3,6 +3,7 @@ import ProfileCard from "./ProfileCard";
 import EmptyProfPic from "./EmptyProfPic.jpg";
 import VarDisplay from "./VarDisplay";
 import JobBoard from "./JobBoard";
+import StyledButtons from "./StyledButtons";
 
 const App = () => {
   const userProfile = {
@@ -34,6 +35,7 @@ const App = () => {
       <ProfileCard {...userProfile3} />
        <VarDisplay />
        <JobBoard />
+       <StyledButtons />
     </div>
   );
 };
