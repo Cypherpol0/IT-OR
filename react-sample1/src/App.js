@@ -4,6 +4,9 @@ import EmptyProfPic from "./EmptyProfPic.jpg";
 import VarDisplay from "./VarDisplay";
 import JobBoard from "./JobBoard";
 import StyledButtons from "./StyledButtons";
+import JobCounter from "./JobCounter";
+import AdvancedJobCounter from "./AdvancedJobCount";
+import DynamicForm from "./DynamicForm";
 
 const App = () => {
   const userProfile = {
@@ -36,6 +39,9 @@ const App = () => {
        <VarDisplay />
        <JobBoard />
        <StyledButtons />
+       <JobCounter />
+       <AdvancedJobCounter />
+       <DynamicForm />
     </div>
   );
 };
