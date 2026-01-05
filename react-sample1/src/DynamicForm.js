@@ -1,43 +1,34 @@
 import React from "react";
+import { useState } from "react";
 
 const DynamicForm = () => {
-    const [formData, setFormData] = React.useState({
-        message: ""
-    });
+  const [inputValue, setInputValue] = useState("");
 
-    const handleChange = (event) => {
-        const { name, value } = event.target;
-        setFormData((prevData) => ({
-            ...prevData,
-            [name]: value
-        }));
-    };
+  const handleFormData = (event) => {
+    setInputValue(event.target.value);
+    console.log(`Input value changed to: ${event.target.value}`);
+  }
 
-    const handleInputChange = (event) => {
-        handleChange(event);
-    };
-
-    const handleReset = () => {
-        setFormData({ message: "" });
-    };
-
-    return (
+  const handleResetForm = () => {
+    setInputValue("");
+  }
+  return (
     <div>
       <h1>Dynamic Form</h1>
-      <input
-        type="text"
-        value={formData.message}
-        onChange={handleInputChange}
-        placeholder="Type something..."
-      />
-      <button onClick={handleReset}>Reset</button>
-      <div>
-        <h2>Current Input:</h2>
-        <p>{formData.message}</p>
-      </div>
+      <form>
+        <label>
+          Name:
+          <input
+            type="text"
+            value={inputValue}
+            onChange={handleFormData}
+          />
+        </label>
+      </form>
+      <button onClick={handleResetForm}>Reset</button>
+      <p>Your input: {inputValue}</p>
     </div>
-    );
-
-}
+  );
+};
 
 export default DynamicForm;
