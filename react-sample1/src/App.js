@@ -7,6 +7,7 @@ import StyledButtons from "./StyledButtons";
 import JobCounter from "./JobCounter";
 import AdvancedJobCounter from "./AdvancedJobCount";
 import DynamicForm from "./DynamicForm";
+import DynamicBotList from "./DynamicBotList";
 
 const App = () => {
   const userProfile = {
@@ -42,6 +43,7 @@ const App = () => {
        <JobCounter />
        <AdvancedJobCounter />
        <DynamicForm />
+       <DynamicBotList />
     </div>
   );
 };
