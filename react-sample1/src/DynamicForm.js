@@ -25,6 +25,7 @@ const DynamicForm = () => {
           />
         </label>
       </form>
+      <br />
       <button onClick={handleResetForm}>Reset</button>
       <p>Your input: {inputValue}</p>
     </div>
