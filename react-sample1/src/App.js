@@ -8,6 +8,8 @@ import JobCounter from "./JobCounter";
 import AdvancedJobCounter from "./AdvancedJobCount";
 import DynamicForm from "./DynamicForm";
 import DynamicBotList from "./DynamicBotList";
+import Header from "./components/Header.js";
+import Footer from "./components/Footer.js";
 
 const App = () => {
   const userProfile = {
@@ -33,6 +35,7 @@ const App = () => {
 
   return (
     <div className="app">
+      <Header />
       <h1>User Profiles</h1>
       <ProfileCard {...userProfile} />
       <ProfileCard {...userProfile2} />
@@ -44,6 +47,7 @@ const App = () => {
        <AdvancedJobCounter />
        <DynamicForm />
        <DynamicBotList />
+       <Footer />
     </div>
   );
 };

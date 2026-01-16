@@ -1,13 +1,13 @@
 import React from 'react';
-import { useState } from 'react';
 
-const DynamicBotList = () => {
+const JobItem = ({ job }) => {
+  // Implement conditional rendering based on job status
   const [newBot, setNewBot] = useState({ id: "", name: "", status: "Running", task: "" });
-  const [bots, setBots] = useState([
-    { id: 1, name: "Email Extractor", status: "Running", task: "Extracting emails" },
-    { id: 2, name: "Notification Sender", status: "Completed", task: "Sending notifications" },
-    { id: 3, name: "Data Analyzer", status: "Stopped", task: "Analyzing data" }
-  ]);
+    const [bots, setBots] = useState([
+      { id: 1, name: "Email Extractor", status: "Running", task: "Extracting emails" },
+      { id: 2, name: "Notification Sender", status: "Completed", task: "Sending notifications" },
+      { id: 3, name: "Data Analyzer", status: "Stopped", task: "Analyzing data" }
+    ]);
 
   const triggerJob = (id) => {
     const currentStatus = {"Running" : "Stopped", "Stopped" : "Completed", "Completed" : "Running"};
@@ -16,7 +16,6 @@ const DynamicBotList = () => {
     ));
     console.log(`Bot with ID ${id} triggered.`);
   };
-
   const deleteBot = (id) => {
     setBots(bots.filter(bot => bot.id !== id));
     console.log(`Bot with ID ${id} deleted.`);
@@ -38,14 +37,12 @@ const DynamicBotList = () => {
     return <span style={style}>{status}</span>;
   }
 
-  const [show, setShow] = useState(false);
 
-  return (
+   return (
     <div className="bot-list-manager">
       <h1>Bot List Manager</h1>
       <ul>
-      <button onClick={() => setShow(!show)}>{show ? "Hide Bots" : "Show Bots"}</button>
-        {show && bots.map(bot =><li key={bot.id}><span>{bot.name} - {StyledStatus(bot.status)} - {bot.task}<button onClick={() => triggerJob(bot.id)}>Change status</button><button onClick={() => deleteBot(bot.id)}>Delete bot</button></span></li>)}
+        {bots.map(bot =><li key={bot.id}><span>{bot.name} - {StyledStatus(bot.status)} - {bot.task}<button onClick={() => triggerJob(bot.id)}>Change status</button><button onClick={() => deleteBot(bot.id)}>Delete bot</button></span></li>)}
       </ul>
       <br />
       <button onClick={AddBot}>Add Bot</button>
@@ -58,4 +55,4 @@ const DynamicBotList = () => {
   );
 }
 
-export default DynamicBotList;
+export default JobItem;
