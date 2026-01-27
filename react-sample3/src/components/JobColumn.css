@@ -1,0 +1,37 @@
+.status-image{
+    width: 30px;
+    height: 30px;
+    margin-left: 10px;
+}
+
+
+
+.job-column{
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  border: 1px solid gray;
+  margin: 10px;
+  padding: 10px;
+  box-shadow: 5px 5px 3px lightgray;
+}
+
+.heading-status{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: large;
+    font-weight: bold;
+}
+
+.column-section{
+    border: 1px black solid;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+}

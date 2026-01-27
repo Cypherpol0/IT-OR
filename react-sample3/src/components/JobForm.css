@@ -1,0 +1,68 @@
+.form-header{
+    max-width: 60%;
+    margin: auto;
+    border : 3px solid black;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.bot-input{
+    font-size: medium;
+    padding: 5px;
+    border: 1px solid gray;
+    border-radius: 5px;
+    margin: auto;
+    display: flex;
+    focus{
+        outline: none;
+        border: 2px solid rgb(172, 168, 168);
+    }
+}
+
+.form-details{
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+}
+
+.bottom-line{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin: auto;
+}
+
+.job-status{
+    background-color: lightgray;
+}
+
+.submit-data{
+    background-color: lightgreen;
+    border: 1px solid whitesmoke;
+    border-radius: 5px;
+    padding: 5px;
+    box-shadow: 5px 5px 3px rgb(173, 173, 173);
+    hover{
+        background-color: green;
+        color: white;
+        cursor: pointer;
+    }
+    active {
+        background-color: darkgreen;
+    }
+}
+
+@media screen and (max-width: 992px) {
+
+}
+
+/* On screens that are 600px wide or less, make the columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 500px) {
+
+}

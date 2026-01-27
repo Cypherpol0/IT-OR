@@ -1,0 +1,16 @@
+.deleteImg {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.job-boxstatus {
+    width: 100%;
+    padding: auto;
+    margin-bottom: 5px;
+    border: 1px solid rgb(0, 0, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
