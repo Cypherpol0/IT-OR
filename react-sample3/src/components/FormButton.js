@@ -1,10 +1,11 @@
 import React from 'react'
 import './FormButton.css'
 
-export const FormButton = (props) => {
+export const FormButton = ({ value, selectCategory, select }) => {
+
   return (
     <div>
-      <button type="tag" className='tag'>{props.value}</button>
+      <button type="button" className="tag" onClick={() => selectCategory(value)}>{value}</button>
     </div>
   )
 }

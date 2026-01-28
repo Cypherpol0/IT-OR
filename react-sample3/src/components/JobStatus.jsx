@@ -3,10 +3,10 @@ import { FormButton } from './FormButton'
 import deleteIcon from '../images/deleteIcon.png'
 import './JobStatus.css'
 
-export const JobStatus = () => {
+export const JobStatus = ({jobs}) => {
   return (
     <article className="job-status-article">
-        <p className="job-status-text">Job Status Component</p>
+        <p className="job-status-text">{jobs}</p>
         <div className='job-box'>
             <div className='job-boxstatus'>
                 <FormButton value = "Parse Emails"/>
