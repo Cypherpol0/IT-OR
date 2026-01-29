@@ -4,10 +4,10 @@ import { FormButton } from './FormButton'
 import { useState } from 'react'
 export let callAddJob;
 
-export const JobForm = () => {
+export const JobForm = ({setJobs}) => {
   const [activity, setActivity] = useState({
     activityText: '',
-    jobStatus: '',
+    jobStatus: 'start',
     category: []
   })
   
@@ -34,7 +34,10 @@ export const JobForm = () => {
   const callSubmitForm = (e) => {
     e.preventDefault()
     console.log(activity)
-  }
+    setJobs(prev =>{
+      return [...prev, activity]
+    })
+  }; 
 
   const validateCategory = (cat) => {
     return activity.category.some(item => item === cat);
@@ -56,7 +59,7 @@ export const JobForm = () => {
   return (
     <div className='form-header'>
         <form className='job-form' onSubmit={callSubmitForm}>
-            <input name="activityText" type="text" className="bot-input" placeholder='Enter Job Title' onChange={callChangeText}/>
+            <input name="activityText" type="text" className="bot-input" placeholder='Enter Job Title' onChange={callFunctionForm}/>
             <br />
             <div className='form-details'>
                 <div className='bottom-line'>  
@@ -66,13 +69,13 @@ export const JobForm = () => {
                 </div>
             </div>
             <br />
-            <select name="jobStatus" id="jobStatus" className='job-status' onChange={callChangeStatus}>
+            <select name="jobStatus" id="jobStatus" className='job-status' onChange={callFunctionForm}>
                 <option value="start">Start Process</option>
                 <option value="inProgress">In Progress</option>
                 <option value="completed">Completed</option>
                 <option value="stopped">Stopped</option>
             </select>
-            <button type="submit" className='submit-data' onClick={callFunctionForm}>Add Job</button>
+            <button type="submit" className='submit-data'>Add Job</button>
         </form>
     </div>
   )
