@@ -18,19 +18,6 @@ export const JobForm = ({setJobs}) => {
       return {...ini, [name]:value}
     });
   }
-
-  const callChangeText = (e) => {
-    setActivity(ini => {
-      return {...ini, activityText: e.target.value}
-    });
-  }
-
-  const callChangeStatus = (e) => {
-    setActivity(ini =>{
-      return {...ini, jobStatus: e.target.value}
-    });
-  }
-
   const callSubmitForm = (e) => {
     e.preventDefault()
     console.log(activity)
