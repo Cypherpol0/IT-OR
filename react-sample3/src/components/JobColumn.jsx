@@ -2,7 +2,7 @@ import React from 'react'
 import './JobColumn.css'
 import { JobStatus } from './JobStatus';
 
-export const JobColumn = ({ title, image, alt, jobStatus, jobs }) => {
+export const JobColumn = ({ title, image, alt, jobStatus, jobs, deleteJob }) => {
   return (
     <div className="job-column">
       <h2 className="heading-status">
@@ -15,6 +15,7 @@ export const JobColumn = ({ title, image, alt, jobStatus, jobs }) => {
           key={index}
           activityText={job.activityText} 
           category={job.category} 
+          deleteJob={() => deleteJob(index)}
           />))
       }
     </div>

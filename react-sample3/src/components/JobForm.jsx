@@ -6,7 +6,7 @@ export let callAddJob;
 
 export const JobForm = ({setJobs}) => {
   const [activity, setActivity] = useState({
-    activityText: '',
+    activityText: "",
     jobStatus: 'start',
     category: []
   })
@@ -23,6 +23,11 @@ export const JobForm = ({setJobs}) => {
     console.log(activity)
     setJobs(prev =>{
       return [...prev, activity]
+    })
+    setActivity({
+      activityText: "",
+      jobStatus: 'start',
+      category: []
     })
   }; 
 
@@ -46,7 +51,7 @@ export const JobForm = ({setJobs}) => {
   return (
     <div className='form-header'>
         <form className='job-form' onSubmit={callSubmitForm}>
-            <input name="activityText" type="text" className="bot-input" placeholder='Enter Job Title' onChange={callFunctionForm}/>
+            <input value={activity.activityText} name="activityText" type="text" className="bot-input" placeholder='Enter Job Title' onChange={callFunctionForm}/>
             <br />
             <div className='form-details'>
                 <div className='bottom-line'>  
@@ -56,7 +61,7 @@ export const JobForm = ({setJobs}) => {
                 </div>
             </div>
             <br />
-            <select name="jobStatus" id="jobStatus" className='job-status' onChange={callFunctionForm}>
+            <select value={activity.jobStatus} name="jobStatus" id="jobStatus" className='job-status' onChange={callFunctionForm}>
                 <option value="start">Start Process</option>
                 <option value="inProgress">In Progress</option>
                 <option value="completed">Completed</option>

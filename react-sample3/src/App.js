@@ -11,6 +11,10 @@ import { JobForm } from './components/JobForm';
 
 function App() {
   const [jobs, setJobs] = useState([]);
+  const deleteJob = (index) => {
+    const newJobs = jobs.filter((job, i) => i !== index);
+    setJobs(newJobs);
+  }
   console.log(jobs);
   return (
     <div className="App">
@@ -23,6 +27,7 @@ function App() {
           jobStatus="start"
           alt="To-do icon" 
           jobs={jobs}
+          deleteJob={deleteJob}
       />
 
       <JobColumn 
@@ -31,6 +36,7 @@ function App() {
         jobStatus="inProgress"
         alt="In Progress icon"
         jobs={jobs}
+        deleteJob={deleteJob}
       />
 
       <JobColumn 
@@ -39,6 +45,7 @@ function App() {
         jobStatus="completed"
         alt="Done icon"
         jobs={jobs}
+        deleteJob={deleteJob}
       />
 
       <JobColumn 
@@ -47,6 +54,7 @@ function App() {
         jobStatus="stopped"
         alt="Stopped icon"
         jobs={jobs}
+        deleteJob={deleteJob}
       />
     </main>
     <Footer />
