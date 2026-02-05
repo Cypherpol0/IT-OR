@@ -2,15 +2,24 @@ import './App.css';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import { JobColumn } from './components/JobColumn';
-import {useState} from 'react';
+import {useState, useEffect} from 'react';
 import toDoIcon from './images/ToDO.jpg';
 import inProgressIcon from './images/InProgress.png';
 import doneIcon from './images/Done.png';
 import stopIcon from './images/stopIcon.jpg';
 import { JobForm } from './components/JobForm';
 
+const prevJob = JSON.parse(localStorage.getItem('jobs')) || [];
+console.log(prevJob);
+
 function App() {
-  const [jobs, setJobs] = useState([]);
+  const initialJobs = prevJob.length > 0 ? prevJob : [];
+  const [jobs, setJobs] = useState(initialJobs);
+
+  useEffect(() => {
+    localStorage.setItem('jobs', JSON.stringify(jobs));
+  }, [jobs]);
+
   const deleteJob = (index) => {
     const newJobs = jobs.filter((job, i) => i !== index);
     setJobs(newJobs);
