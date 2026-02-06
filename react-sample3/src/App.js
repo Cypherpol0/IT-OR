@@ -24,11 +24,17 @@ function App() {
     const newJobs = jobs.filter((job, i) => i !== index);
     setJobs(newJobs);
   }
+
+  const clearAllJobs = () => {
+  setJobs([]);
+  localStorage.removeItem('jobs');
+  };
+
   console.log(jobs);
   return (
     <div className="App">
     <Header />
-    <JobForm setJobs={setJobs} />
+    <JobForm setJobs={setJobs} clearAllJobs={clearAllJobs} />
     <main className="headerfunction">
       <JobColumn 
           title="Need to Start" 

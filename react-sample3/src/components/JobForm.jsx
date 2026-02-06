@@ -4,7 +4,7 @@ import { FormButton } from './FormButton'
 import { useState } from 'react'
 export let callAddJob;
 
-export const JobForm = ({setJobs}) => {
+export const JobForm = ({setJobs, clearAllJobs}) => {
   const [activity, setActivity] = useState({
     activityText: "",
     jobStatus: 'start',
@@ -68,6 +68,7 @@ export const JobForm = ({setJobs}) => {
                 <option value="stopped">Stopped</option>
             </select>
             <button type="submit" className='submit-data'>Add Job</button>
+            <button type="button" className='clear-data' onClick={clearAllJobs}>Clear All Jobs</button>
         </form>
     </div>
   )
