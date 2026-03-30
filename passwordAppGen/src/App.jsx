@@ -1,11 +1,13 @@
-import { useState, useCallback } from 'react'
+import { useState, useCallback, useEffect, useRef } from 'react'
 import './App.css'
 
 function App() {
   const [length, setLength] = useState(10);
-  const [numAllow, setNumAllow] = useState(false);
-  const [charAllow, setCharAllow] = useState(false);
+  const [numAllow, setNumAllow] = useState(true);
+  const [charAllow, setCharAllow] = useState(true);
   const [pass, setPassword] = useState("");
+
+  const passwordasRef = useRef(null);
 
   const passwordGenerator = useCallback(() => {
     const strdata = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
@@ -29,6 +31,15 @@ function App() {
     setPassword(password);
   }, [length, numAllow, charAllow, setPassword]);
 
+  const copyFunction = useCallback(() => {
+    passwordasRef.current?.select();
+    navigator.clipboard.writeText(pass);
+  }, [pass]);
+
+  useEffect(() => {
+    passwordGenerator();
+  }, [length, numAllow, charAllow, passwordGenerator]);
+
   return (
     <>
       <div className="w-full max-w-3xl mx-auto p-4 m-4 shadow-lg rounded-lg bg-gray-600">
@@ -40,9 +51,10 @@ function App() {
             readOnly
             className="w-full p-2 text-center text-lg font-bold bg-gray-700 text-white"
             placeholder='Password'
+            ref={passwordasRef}
           />
           <button
-            onClick={() => navigator.clipboard.writeText(pass)}
+            onClick={copyFunction}
             className="px-4 py-2 bg-green-500 text-white rounded hover:bg-green-600"
           >
             Copy
