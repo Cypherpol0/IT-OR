@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import Header from './assets/components/Header/Header'
+import Movies from './assets/components/Movies/Movies'
 import './App.css'
 
 function App() {
@@ -8,8 +9,7 @@ function App() {
     <div className="App">
       <Header />
       <main className="main-content">
-        <h2>Welcome to the Movie Review App!</h2>
-        <p>Discover and share your favorite movies.</p>
+        <Movies />
       </main>
     </div>
   )
