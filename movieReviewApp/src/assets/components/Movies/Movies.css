@@ -48,3 +48,9 @@
     gap: 1rem;
     align-items: center;
 }
+
+.movie-shows {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}

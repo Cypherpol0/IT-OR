@@ -1,5 +1,6 @@
 import React from 'react'
 import './Movies.css'
+import { WatchMovies } from './WatchMovies'
 
 const Movies = () => {
   return (
@@ -24,6 +25,10 @@ const Movies = () => {
             </select>
         </div>
       </header>
+
+      <div className="movie-shows">
+        <WatchMovies />
+      </div>
     </section>
   )
 }
