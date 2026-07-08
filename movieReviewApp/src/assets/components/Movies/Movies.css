@@ -28,7 +28,11 @@
     padding: 7px 17px;
     cursor: pointer;
 }
-
+.movie_filter_item.active {
+    background-color: white;
+    color: black;
+    border-radius: 5px;
+}
 .center-el{
     display: flex;
     justify-content: center;
@@ -53,4 +57,10 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
+}
+
+.none-found {
+    color: white;
+    font-size: 20px;
+    font-weight: 500;
 }
