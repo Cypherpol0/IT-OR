@@ -1,5 +1,6 @@
 import Logo from '@/assets/Logo(My initials).png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import './Header.css';
 
 const navLinks = [
   { label: 'About', href: '#About' },
@@ -11,7 +12,7 @@ const navLinks = [
 
 export const Header = () => {
   return (
-    <header className="bg-transparent shadow-sm fixed top-0 left-0 right-0 py-5 mx-0 w-full">
+    <header className="bg-transparent shadow-sm fixed top-0 left-0 right-0 py-5 mx-0 w-full z-50">
 
         <nav className="container mx-auto flex items-center justify-between px-2 sm:px-4">
             <a href="#" className="rounded-full shrink-0"><img src={Logo} className="w-12 h-12 sm:w-15 sm:h-15 mx-auto" alt="Logo" /></a>

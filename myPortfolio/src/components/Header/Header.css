@@ -27,3 +27,31 @@
     font-weight: 900;
     transition: color 0.3s ease;
 }
+
+ul.glass {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(107, 114, 128, 0.28) transparent;
+}
+
+ul.glass::-webkit-scrollbar {
+    height: 4px;
+}
+
+ul.glass::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+ul.glass::-webkit-scrollbar-thumb {
+    background: rgba(107, 114, 128, 0.28);
+    border-radius: 999px;
+}
+
+ul.glass::-webkit-scrollbar-thumb:hover {
+    background: rgba(107, 114, 128, 0.4);
+}
+
+ul.glass::-webkit-scrollbar-button {
+    display: none;
+    width: 0;
+    height: 0;
+}
