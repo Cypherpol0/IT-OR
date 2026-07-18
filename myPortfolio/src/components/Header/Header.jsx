@@ -19,7 +19,7 @@ export const Header = () => {
             <ul className="glass flex flex-nowrap items-center gap-1 sm:gap-2 px-1.5 py-1.5 sm:px-2 sm:py-2 rounded-full overflow-x-auto max-w-[45vw] sm:max-w-none">
                 {navLinks.map((link) => (
                     <li key={link.href} className="shrink-0">
-                        <a href={link.href} className="px-2 py-1 sm:px-4 sm:py-2 text-sm sm:text-base rounded-full hover:bg-gray-100 whitespace-nowrap">
+                        <a href={link.href} className="px-2 py-1 sm:px-4 sm:py-2 text-sm sm:text-base rounded-full hover:bg-gray-100 whitespace-nowrap hover:text-black hover:font-bold transition-colors duration-300">
                             {link.label}
                         </a>
                     </li>
